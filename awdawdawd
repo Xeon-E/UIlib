@@ -1670,13 +1670,11 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
 
     local opened = false
 
-    if not islist then
-        dropdown.MouseButton1Click:Connect(function()
-            opened = not opened
-            contentframe.Visible = opened
-            icon.Text = opened and "-" or "+"
-        end)
-    end
+    dropdown.MouseButton1Click:Connect(function()
+        opened = not opened
+        contentframe.Visible = opened
+        icon.Text = opened and "-" or "+"
+    end)
 
     local optioninstances = {}
     local count = 0
