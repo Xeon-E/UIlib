@@ -1763,7 +1763,7 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
                     utility.changeobjecttheme(text, "Disabled Text")
 
                     library.flags[flag] = chosen
-                    contentholder.Visible = false
+                    --contentholder.Visible = false
                     callback(chosen)
                 else
                     if #chosen == max then
@@ -1794,7 +1794,7 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
                     utility.changeobjecttheme(text, "Text")
 
                     library.flags[flag] = chosen
-                    contentholder.Visible = false
+                    --contentholder.Visible = false
                     callback(chosen)
                 end
             else
@@ -1815,6 +1815,7 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
                 utility.changeobjecttheme(text, "Text")
 
                 library.flags[flag] = option
+                contentholder.Visible = false
                 callback(option)
             end
         end)
