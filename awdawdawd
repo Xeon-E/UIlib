@@ -1815,7 +1815,6 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
                 utility.changeobjecttheme(text, "Text")
 
                 library.flags[flag] = option
-                contentframe.Visible = false
                 callback(option)
             end
         end)
