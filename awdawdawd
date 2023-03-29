@@ -1672,7 +1672,7 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
 
     dropdown.MouseButton1Click:Connect(function()
         opened = not opened
-        contentframe.Visible = opened
+        contentframe.Visible = not contentframe.Visible
         icon.Text = opened and "-" or "+"
     end)
 
