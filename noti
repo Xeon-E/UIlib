@@ -65,7 +65,7 @@ function library:notification(properties)
     -- create elements
     local outer = library:create('frame', {
         Position = Vector2.new(x - 350, y),
-        Size = Vector2.new(250, 50),
+        Size = Vector2.new(350, 50),
         Color = Color3.fromRGB(30, 30, 36),
         Filled = true,
         Visible = true
