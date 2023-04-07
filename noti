@@ -45,7 +45,7 @@ function library:create(name, properties)
     if name == 'Text' or name == 'text' then
         d = Drawing.new('Text')
         d.Center = true 
-        d.Font = 3
+        d.Font = Drawing.Fonts.Plex
     end
     
     for i,v in pairs(properties) do
@@ -65,8 +65,8 @@ function library:notification(properties)
     -- create elements
     local outer = library:create('frame', {
         Position = Vector2.new(x - 350, y),
-        Size = Vector2.new(350, 50),
-        Color = Color3.fromRGB(0, 0, 0),
+        Size = Vector2.new(250, 50),
+        Color = Color3.fromRGB(30, 30, 36),
         Filled = true,
         Visible = true
     })
@@ -80,7 +80,7 @@ function library:notification(properties)
     local inner = library:create('frame', {
         Position = Vector2.new(99999, 99999),
         Size = Vector2.new(inner_outline.Size.X - 2, inner_outline.Size.Y - 2),
-        Color = Color3.fromRGB(30, 30, 30),
+        Color = Color3.fromRGB(20, 20, 24),
         Filled = true,
         Visible = true
     })
@@ -103,7 +103,7 @@ function library:notification(properties)
         Text = properties.Text,
         Font = Drawing.Fonts.Plex,
         Size = 13,
-        Color = Color3.fromRGB(255, 255, 255),
+        Color = Color3.fromRGB(200, 200, 200),
         Visible = true
     })
     
