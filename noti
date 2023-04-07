@@ -65,7 +65,7 @@ function library:notification(properties)
     -- create elements
     local outer = library:create('frame', {
         Position = Vector2.new(x - 350, y),
-        Size = Vector2.new(350, 50),
+        Size = Vector2.new(250, 50),
         Color = Color3.fromRGB(0, 0, 0),
         Filled = true,
         Visible = true
@@ -93,7 +93,7 @@ function library:notification(properties)
     local title = library:create('text', {
         Position = Vector2.new(99999, 99999),
         Text = properties.Title,
-        Size = 15,
+        Size = 13,
         Font = Drawing.Fonts.Plex,
         Color = library.accent,
         Visible = true
@@ -102,7 +102,7 @@ function library:notification(properties)
         Position = Vector2.new(99999, 99999),
         Text = properties.Text,
         Font = Drawing.Fonts.Plex,
-        Size = 15,
+        Size = 13,
         Color = Color3.fromRGB(255, 255, 255),
         Visible = true
     })
