@@ -1220,7 +1220,7 @@ function library:SaveConfig(name, universal)
                     configtbl[flag] = tostring(value)
                 elseif typeof(value) == "Color3" then
                     configtbl[flag] = {color = value:ToHex(), alpha = value.A}
-                    print(tostring(alpha), math.floor(alpha * 100) / 100)
+                    print(value.A)
                 else
                     configtbl[flag] = value
                 end
