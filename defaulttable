@@ -1,7 +1,7 @@
 {
       enemy = {
-          enabled = true,
-          box = true,
+          enabled = false,
+          box = false,
           boxColor = { Color3.new(1,0,0), 1 },
           --boxColor = { "Team Color", 1 }, -- Do this to change a single color to the team color
           boxOutline = true,
@@ -48,8 +48,8 @@
           chamsOutlineColor = { Color3.new(1,0,0), 0 },
       },
       friendly = {
-          enabled = true,
-          box = true,
+          enabled = false,
+          box = false,
           boxColor = { Color3.new(0,1,0), 1 },
           boxOutline = true,
           boxOutlineColor = { Color3.new(), 1 },
