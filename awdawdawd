@@ -1219,8 +1219,8 @@ function library:SaveConfig(name, universal)
                 if typeof(value) == "EnumItem" then
                     configtbl[flag] = tostring(value)
                 elseif typeof(value) == "Color3" then
-                    configtbl[flag] = {color = value:ToHex(), alpha = math.floor(value.A * 100) / 100}
-                    print(value)
+                    configtbl[flag] = {color = value:ToHex(), alpha = value.A}
+                    print(tostring(alpha), math.floor(alpha * 100) / 100)
                 else
                     configtbl[flag] = value
                 end
