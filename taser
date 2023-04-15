@@ -43,7 +43,7 @@ fov_circle.Filled = false
 fov_circle.Visible = false
 fov_circle.ZIndex = 999
 fov_circle.Transparency = 1
-fov_circle.Color = Color3.fromRGB(54, 57, 241)
+fov_circle.Color = Color3.fromRGB(34, 37, 36)
 
 local ExpectedArguments = {
     FindPartOnRayWithIgnoreList = {
@@ -160,7 +160,6 @@ local oldIndex = nil
 oldIndex = hookmetamethod(game, "__index", newcclosure(function(self, Index)
     if self == Mouse and not checkcaller() and Settings.Cop.SilentAim.Toggle and getClosestPlayer() then
         local HitPart = getClosestPlayer()
-         print("work")
         if Index == "Target" or Index == "target" then 
             return HitPart
         elseif Index == "Hit" or Index == "hit" then 
