@@ -99,12 +99,12 @@ local function getClosestPlayer()
     local DistanceToMouse
     for _, Player in next, GetPlayers(Players) do
         if Player == LocalPlayer then continue end
-        if Settings.Cop.SilentAim.TeamCheck and Player.Team == LocalPlayer.Team then continue end
+        if Player.Team == "Civilian" then continue end
 
         local Character = Player.Character
         if not Character then continue end
 
-        if v:FindFirstChild("Is_Wanted") ~= nil then continue end
+        if v:FindFirstChild("Is_Wanted") == nil then continue end
         
         if Settings.Cop.SilentAim.VisibleCheck and not IsPlayerVisible(Player) then continue end
 
@@ -160,7 +160,7 @@ local oldIndex = nil
 oldIndex = hookmetamethod(game, "__index", newcclosure(function(self, Index)
     if self == Mouse and not checkcaller() and Settings.Cop.SilentAim.Toggle and getClosestPlayer() then
         local HitPart = getClosestPlayer()
-         
+         print("work")
         if Index == "Target" or Index == "target" then 
             return HitPart
         elseif Index == "Hit" or Index == "hit" then 
