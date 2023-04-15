@@ -104,7 +104,7 @@ local function getClosestPlayer()
         local Character = Player.Character
         if not Character then continue end
 
-        if v:FindFirstChild("Is_Wanted") == nil then continue end
+        if Player:FindFirstChild("Is_Wanted") == nil then continue end
         
         if Settings.Cop.SilentAim.VisibleCheck and not IsPlayerVisible(Player) then continue end
 
